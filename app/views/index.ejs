@@ -8,6 +8,9 @@
             <div><%= position.sanskrit_name %>  </div>
             <div><%= position.english_name %>  </div>
             <img src="<%= position.img_url %>" alt="image <%= position.sanskrit_name %>">
+            <form method="post" >
+                <button name='<%= position.id %>'>add to favorites</button>
+            </form>
             
             
         </article>
