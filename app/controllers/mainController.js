@@ -23,6 +23,15 @@ const mainController = {
     },
     addToFavorites : (request,response,next) =>  {
         console.log(request.body);
+        if (!request.session.favorites){
+            request.session.favorites = []
+        }
+        if (request.session.favorites.includes(request.body.position)){
+
+        } else {
+            request.session.favorites.push(request.body.position)
+        }
+        console.log('request.session.favorites:', request.session.favorites)
         response.redirect(`/`);
     }
 

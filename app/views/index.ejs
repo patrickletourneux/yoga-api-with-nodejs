@@ -9,8 +9,8 @@
             <div><%= position.english_name %>  </div>
             <img src="<%= position.img_url %>" alt="image <%= position.sanskrit_name %>">
             <form method="post" >
-                <input type="text" value='<%= position.id %>' name='position<%= position.id %>'>
-                <button name='position<%= position.id %>'>add to favorites</button>
+                <!-- <input type="text" value='<%= position.id %>' name='position<%= position.id %>'> -->
+                <button name='position' value='<%= position.id %>'>'add to favorites'</button>
             </form>     
         </article> 
         <% } %>   
