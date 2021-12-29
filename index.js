@@ -33,10 +33,10 @@ app.use(session({
     cookie: {}
 }));
 
-// router.use((request, response) => {
-//     response.status(404).render(`404`);
-// });
-// app.use(router);
+router.use((request, response) => {
+    response.status(404).render(`404`);
+});
+app.use(router);
 
 
 

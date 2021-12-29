@@ -1,5 +1,5 @@
 
-## Patrick test
+# Patrick test
 create a nodejs server with simple Yoga API and use some nodejs packages
 
 
@@ -10,16 +10,21 @@ Icons are the work of <a href="https://thenounproject.com/hivernoir/collection/y
 
 
 ## dependancies
+```
 express
 node-dev
 ejs
 dotenv
 pg
 express-session
+```
 
 ## database
 postgresql is installed localy
 use file .sql to create a local db  as "yoga1"
+```
+psql -U ---- -d yoga1 -f file.sql
+```
 
 ## rename .env-example as .env
 and modify the KEY
