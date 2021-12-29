@@ -9,15 +9,10 @@
             <div><%= position.english_name %>  </div>
             <img src="<%= position.img_url %>" alt="image <%= position.sanskrit_name %>">
             <form method="post" >
-                <button name='<%= position.id %>'>add to favorites</button>
-            </form>
-            
-            
-        </article>
-        
-        
+                <input type="text" value='<%= position.id %>' name='position<%= position.id %>'>
+                <button name='position<%= position.id %>'>add to favorites</button>
+            </form>     
+        </article> 
         <% } %>   
-        
-        
     </main>
         <%- include ('partials/footer.ejs') %>

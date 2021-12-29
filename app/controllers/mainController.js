@@ -5,7 +5,7 @@ const mainController = {
         console.log('Render Home');
         try {
             const allPositions = await dataMapper.getAllPositions();
-            console.log(allPositions);
+            // console.log(allPositions);
             if (allPositions) {
                 response.render('index', {
                     allPositions
@@ -21,6 +21,10 @@ const mainController = {
         }
         
     },
+    addToFavorites : (request,response,next) =>  {
+        console.log(request.body);
+        response.redirect(`/`);
+    }
 
 };
 
