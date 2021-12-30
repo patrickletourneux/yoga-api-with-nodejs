@@ -1,18 +1,18 @@
 <%- include ('partials/header.ejs') %>
 <main>
+    <div><h1>YOGA favorites positions</h1></div>
+    <div class="index__articles">
 
     <% for (position of locals.allPositions) {   %> 
         <%    if (favoritesIDs.includes(position.id.toString())) { %>
-        <article>
+            <article class="index__articles__article" >
             <div><%= position.sanskrit_name %>  </div>
             <div><%= position.english_name %>  </div>
             <img src="<%= position.img_url %>" alt="image <%= position.sanskrit_name %>">
-            <form method="post" >
-                <!-- <input type="text" value='<%= position.id %>' name='position<%= position.id %>'> -->
-                <button name='position' value='<%= position.id %>'>'add to favorites'</button>
-            </form>     
+                
         </article> 
         <% } %>
         <% } %>
+    </div>
 </main>
 <%- include ('partials/footer.ejs') %>

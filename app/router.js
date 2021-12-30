@@ -5,7 +5,10 @@ const router = express.Router();
 const mainController = require('./controllers/mainController');
 
 router.get('/', mainController.homePage);
-router.post('/', mainController.addToFavorites);
+router.post('/', mainController.addToFavoritesFromIndex);
+
+router.get('/position/:id', mainController.positionDetail);
+router.post('/position/:id', mainController.addToFavoritesFromOneposition);
 
 router.get('/favorites', mainController.favorites);
 

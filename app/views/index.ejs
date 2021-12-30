@@ -1,18 +1,22 @@
-
 <%- include ('partials/header.ejs') %>
 <main>
-
-    
-    <% for (position of locals.allPositions) {   %> 
-        <article>
-            <div><%= position.sanskrit_name %>  </div>
-            <div><%= position.english_name %>  </div>
-            <img src="<%= position.img_url %>" alt="image <%= position.sanskrit_name %>">
-            <form method="post" >
-                <!-- <input type="text" value='<%= position.id %>' name='position<%= position.id %>'> -->
-                <button name='position' value='<%= position.id %>'>'add to favorites'</button>
-            </form>     
-        </article> 
-        <% } %>   
-    </main>
-        <%- include ('partials/footer.ejs') %>
+    <div>
+        <h1>YOGA positions</h1>
+    </div>
+    <div class="index__articles">
+        <% for (position of locals.allPositions) {   %>
+        <a href="/position/<%= position.id %>">
+            <article class="index__articles__article" >
+                <div><%= position.sanskrit_name %> </div>
+                <div><%= position.english_name %> </div>
+                <img src="<%= position.img_url %>" alt="image <%= position.sanskrit_name %>">
+                <form method="post">
+                    <!-- <input type="text" value='<%= position.id %>' name='position<%= position.id %>'> -->
+                    <button name='position' value='<%= position.id %>'>add to favorites</button>
+                </form>
+            </article>
+        </a>
+        <% } %>
+    </div>
+</main>
+<%- include ('partials/footer.ejs') %>
