@@ -1,3 +1,5 @@
+require("colors");
+
 const dotenv = require(`dotenv`);
 dotenv.config();
 
@@ -43,8 +45,8 @@ app.use(router);
 // On ajoute le router
 
 
-console.log(`PORT: `, process.env.PORT);
+// console.log(`PORT: `.green, process.env.PORT.green.underline.bold);
 
 app.listen(PORT, () => {
-    console.log(`✅ Server listening on http://localhost:${PORT}`);
+    console.log(`Server listening on http://localhost:${PORT}`.bgGreen.white.bold);
 });

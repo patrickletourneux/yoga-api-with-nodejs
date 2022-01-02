@@ -2,7 +2,7 @@ const dataMapper = require('../dataMapper');
 
 const mainController = {
     homePage: async (request, response, next) => {
-        console.log('Render Home');
+        console.log('Render Home'.bgGrey);
         try {
             const allPositions = await dataMapper.getAllPositions();
             // console.log(allPositions);
@@ -50,7 +50,7 @@ const mainController = {
         response.redirect(`/position/${request.body.position}`);
     },
     favorites: async (request, response, next) => {
-        console.log('render favorites:');
+        console.log('render favorites:'.bgGrey);
         console.log('request.session.favorites:', request.session.favorites)
         try {
             const allPositions = await dataMapper.getAllPositions();
@@ -71,7 +71,7 @@ const mainController = {
         }
     },
     positionDetail: async (request, response, next) => {
-        console.log('render positionDetail:');
+        console.log('render positionDetail:'.bgGrey);
         console.log('request.params:', request.params);
 
         try {
