@@ -25,7 +25,7 @@ const mainController = {
         console.log('request.body:', request.body)
         // create array for favorite in session if not exist
         if (!request.session.favorites) {
-            console.log('creation favorites session array')
+            // console.log('creation favorites session array')
             request.session.favorites = [];
         }
         // add position to array if not includes in array
@@ -52,6 +52,9 @@ const mainController = {
     favorites: async (request, response, next) => {
         console.log('render favorites:'.bgGrey);
         console.log('request.session.favorites:', request.session.favorites)
+        if (!request.session.favorites){
+            request.session.favorites = [];
+        }
         try {
             const allPositions = await dataMapper.getAllPositions();
             // console.log(allPositions);
@@ -71,12 +74,12 @@ const mainController = {
         }
     },
     positionDetail: async (request, response, next) => {
-        console.log('render positionDetail:'.bgGrey);
+        console.log('render positionDetail'.bgGrey);
         console.log('request.params:', request.params);
 
         try {
             const position = (await dataMapper.getOnePosition(request.params.id))[0];
-            console.log('position:', position)
+            // console.log('position:', position)
             if (position) {
                 response.render('positionDetail', {
                     position

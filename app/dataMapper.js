@@ -11,7 +11,7 @@ const dataMapper = {
         WHERE id=$1;`;
         values = [id];
         const position = (await client.query(query,values)).rows;
-        console.log('position:', position)
+        // console.log('position:', position)
         return position;
     }
 
