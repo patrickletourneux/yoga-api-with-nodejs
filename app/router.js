@@ -11,6 +11,7 @@ router.get('/position/:id', mainController.positionDetail);
 router.post('/position/:id', mainController.addToFavoritesFromOneposition);
 
 router.get('/favorites', mainController.favorites);
+router.post('/favorites', mainController.removeToFavoritesFromOneFavorites);
 
 // on exporte le router 
 module.exports = router;

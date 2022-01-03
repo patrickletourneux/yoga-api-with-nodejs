@@ -49,6 +49,10 @@ const mainController = {
         console.log('request.session.favorites:', request.session.favorites)
         response.redirect(`/position/${request.body.position}`);
     },
+    removeToFavoritesFromOneFavorites: (request, response, next) => {
+        request.session.favorites = request.session.favorites.filter (item => item !== request.body.position )
+        response.redirect('/favorites')
+    },
     favorites: async (request, response, next) => {
         console.log('render favorites:'.bgGrey);
         console.log('request.session.favorites:', request.session.favorites)

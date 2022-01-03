@@ -17,6 +17,7 @@ ejs
 dotenv
 pg
 express-session
+colors
 ```
 
 ## database
