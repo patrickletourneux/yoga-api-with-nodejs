@@ -1,15 +1,15 @@
 <%- include ('partials/header.ejs') %>
-<main>
+<main class="container-fluid" >
     <div class="space__3rem_height"></div>
     <div>
-        <h1>YOGA positions</h1>
+        <h3>YOGA positions</h3>
     </div>
-    <div class="index__articles">
+    <div class="index__articles" >
         <% for (position of locals.allPositions) {   %>
         <a href="/position/<%= position.id %>">
             <article class="index__articles__article" >
-                <div><%= position.sanskrit_name %> </div>
-                <div><%= position.english_name %> </div>
+                <header> <%= position.sanskrit_name %> </header>
+                <!-- <div><%= position.english_name %> </div> -->
                 <img src="<%= position.img_url %>" alt="image <%= position.sanskrit_name %>">
                 <form method="post">
                     <!-- <input type="text" value='<%= position.id %>' name='position<%= position.id %>'> -->

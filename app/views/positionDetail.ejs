@@ -1,16 +1,21 @@
 <%- include ('partials/header.ejs') %>
 <main>
     <div class="space__3rem_height"></div>
-    <article class="position__Detail__article">
-        <div><%= locals.position.sanskrit_name %> </div>
-        <div><%= locals.position.english_name %> </div>
-        <img src="<%= locals.position.img_url %>" alt="image <%= locals.position.sanskrit_name %>">
-        <form method="post" >
-            <!-- <input type="text" value='<%= position.id %>' name='position<%= position.id %>'> -->
-            <button name='position' value='<%= position.id %>'>add to favorites</button>
-        </form> 
-    
-    </article>
+    <div>
+        <h3>detail position</h3>
+    </div>
+    <div class="detail-article">
+        <article class="position__Detail__article">
+            <div><%= locals.position.sanskrit_name %> </div>
+            <div><%= locals.position.english_name %> </div>
+            <img src="<%= locals.position.img_url %>" alt="image <%= locals.position.sanskrit_name %>">
+            <form method="post" >
+                <!-- <input type="text" value='<%= position.id %>' name='position<%= position.id %>'> -->
+                <button name='position' value='<%= position.id %>'>add to favorites</button>
+            </form> 
+            
+        </article>
+    </div>
 
 </main>
 <%- include ('partials/footer.ejs') %>
